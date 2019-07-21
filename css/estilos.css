@@ -371,7 +371,13 @@ h2
     .project-details,
     .project-imageContainer
     {
-        width: auto;
+        width: 100%;
+    }
+    .project-image
+    {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
     }
     .event
     {
@@ -382,5 +388,70 @@ h2
         width: 100%;
         object-fit: cover;
         object-position: 25% 25%;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .hero h1
+    {
+        font-size: 30px;
+    }
+    .header
+    {
+        height: auto;
+    }
+    .header .centro
+    {
+        flex-direction: column;
+    }
+    .header ul
+    {
+        flex-direction: column;
+    }
+    .menu ul li
+    {
+        display: block;
+    }
+    .menu ul li a
+    {
+        margin: 10px 0;
+        padding: 0;
+    }
+    .menu ul li a
+    {
+        border-bottom: 1px solid;
+    }
+    .contact
+    {
+        height: auto;
+    }
+    .contact .centro,
+    .form-email
+    {
+        flex-direction: column;
+        align-items: center;
+        display: inherit;
+    }
+    .social
+    {
+        margin-bottom: 1em;
+    }
+    .social-link
+    {
+        width: 25px;
+        height: 25px;
+        background-size: cover;
+    }
+    .footer
+    {
+        padding: 20px;
+    }
+    .footer .centro
+    {
+        flex-direction: column;
+    }
+    .footer p
+    {
+        margin: 5px 0;
     }
 }
