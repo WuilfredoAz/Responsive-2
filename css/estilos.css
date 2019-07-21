@@ -45,21 +45,21 @@ h1 strong
 }
 
 
-.header ul 
+.header ul
 {
     display: flex;
     height: inherit;
     align-items:center;
 }
 
-.header ul li 
+.header ul li
 {
     height: inherit;
     /* display: flex;
     align-items: center; */
 }
 
-.header a 
+.header a
 {
     color: #fff;
     text-decoration: none;
@@ -73,7 +73,7 @@ ol,
 ul
 {
     margin: 0;
-    padding: 0; 
+    padding: 0;
     list-style: none;
 }
 
@@ -168,7 +168,7 @@ h2
     margin-left: 10px;
 }
 
-.event-list 
+.event-list
 {
     display:flex;
     flex-wrap: wrap;
@@ -237,7 +237,6 @@ h2
 .social-link.twitter
 {
     background-image: url('../img/twitter.svg');
-    
 }
 
 .social-link.facebook
@@ -286,7 +285,8 @@ h2
 
 .centro
 {
-    width: 1000px;
+    flex: 1; /*ocupe todo el espacio disponible*/
+    max-width: 1000px;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -309,7 +309,56 @@ h2
     vertical-align: middle;
 }
 
-.footer a 
+.footer a
 {
     color: #fff;
+}
+@media screen and (max-width: 1024px)
+{
+    .header,
+    .hero,
+    .contact,
+    .footer
+    {
+        padding: 0 20px;
+    }
+    .hero
+    {
+        position: relative;
+    }
+    .hero h1
+    {
+        z-index: 2;
+    }
+    .hero-image
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .event-list
+    {
+        margin: 0 10px;
+    }
+    .event-list-title
+    {
+        margin-left: 20px;
+    }
+    .event
+    {
+        width: 48%;
+        margin: 1%;
+    }
+    .form-email button
+    {
+        margin: 10px 0 10px;
+    }
+    .social-link.instagram
+    {
+        margin-right: 0 !important;
+    }
 }
