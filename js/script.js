@@ -56,3 +56,31 @@ validacion(mobile)
 var bLazy = new Blazy({
     selector: 'img'
 });
+
+//configuramos los gestos
+
+//declaramos en una variable al elemento que queremos que resiva los gestos
+var body = document.body;
+
+//configuramos la varible para que resiva gestos
+var gestos = new Hammer(body);
+
+//declaramos un escuchador de eventos tipo HammerJS para cuando dezlice a la derecha y quiera ver el menu
+gestos.on("swiperight", mostrarMenu);
+
+//declaramos un escuchador de eventos tipo HammerJS para cuando dezlice a la izquierda y quiera ocultar el menu
+gestos.on("swipeleft", ocultarMenu);
+
+//creamos la funcion para mostrar el menu y cambiar el icono
+function mostrarMenu()
+{
+    burguerButtom.classList.add("icon-cancel-circle");
+    menu.classList.add("is-active");
+}
+
+//creamos la funcion para ocultar el menu y restaurar el icono
+function ocultarMenu()
+{
+    burguerButtom.classList.remove("icon-cancel-circle");
+    menu.classList.remove("is-active");
+}
