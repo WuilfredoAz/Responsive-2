@@ -362,3 +362,25 @@ h2
         margin-right: 0 !important;
     }
 }
+@media screen and (max-width: 768px)
+{
+    .project
+    {
+        flex-direction: column;
+    }
+    .project-details,
+    .project-imageContainer
+    {
+        width: auto;
+    }
+    .event
+    {
+        width: 98%;
+    }
+    .event img
+    {
+        width: 100%;
+        object-fit: cover;
+        object-position: 25% 25%;
+    }
+}
