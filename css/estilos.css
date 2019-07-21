@@ -455,3 +455,18 @@ h2
         margin: 5px 0;
     }
 }
+@media screen and (max-width: 320px)
+{
+    .hero h1
+    {
+        font-size: 22px;
+    }
+    h2
+    {
+        font-size: 1.2em;
+    }
+    .event-detail
+    {
+        margin: -2em .5em .5em;
+    }
+}
