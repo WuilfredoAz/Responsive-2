@@ -50,3 +50,9 @@ function validacion()
 
 //Ejecutamos la funcion mandandole en donde queremos comprobar
 validacion(mobile)
+
+
+//configuramos el lazy loading
+var bLazy = new Blazy({
+    selector: 'img'
+});
