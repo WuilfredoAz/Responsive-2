@@ -172,9 +172,25 @@ h2
 
 .project-title
 {
-    font-size: 32px;
+    font-size: 2em;
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+.project-course
+{
+    font-size: .7em;
+}
+
+.project-date,
+.project-url
+{
+    font-size: 1em;
+}
+
+.project-description
+{
+    font-size: 1.25em;
 }
 
 .project-course,
@@ -189,10 +205,6 @@ h2
     font-family: 'Fjalla One', sans-serif;
 }
 
-.project-description
-{
-    font-size: 20px;
-}
 
 .project-details
 {
@@ -343,6 +355,7 @@ h2
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer img
@@ -354,7 +367,7 @@ h2
 {
     color: #fff;
 }
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1023px)
 {
     .header,
     .hero,
@@ -389,6 +402,15 @@ h2
     {
         margin-left: 20px;
     }
+    .project-details,
+    .project-imageContainer
+    {
+        width: 50%;
+    }
+    .project-image
+    {
+        width: 100%;
+    }
     .event
     {
         width: 48%;
@@ -403,8 +425,76 @@ h2
         margin-right: 0 !important;
     }
 }
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
 {
+    h2
+    {
+        margin: 0 0 20px;
+    }
+    .header
+    {
+        height: auto;
+        position: relative;
+    }
+    .header .centro
+    {
+        flex-direction: column;
+    }
+    .menu
+    {
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(2, 111, 255, .9);
+        z-index: 3;
+        transition: .3s;
+    }
+    .menu.is-active
+    {
+        left: 0;
+    }
+    .header ul
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header ul li
+    {
+        height: auto;
+    }
+    .menu ul li
+    {
+        display: block;
+    }
+    .menu ul li a
+    {
+        margin: 10px 0;
+        padding: 0;
+        font-size: 2em;
+    }
+    .menu ul li a
+    {
+        border-bottom: 1px solid;
+    }
+
+    .menu-icono
+    {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: rgba(0,0,0,.8);
+        border-radius: 20px;
+        position: fixed;
+        top: 5px;
+        left: 20px;
+        text-align: center;
+        line-height: 40px;
+        z-index: 4;
+    }
     .project
     {
         flex-direction: column;
@@ -418,7 +508,18 @@ h2
     {
         display: block;
         margin: 0 auto;
-        width: 100%;
+    }
+    .portfolio .centro .project:last-child
+    {
+        margin-bottom: 0;
+    }
+    .event-list .centro .event:first-child
+    {
+        margin-top: 0;
+    }
+    .event-list .centro .event:last-child
+    {
+        margin-bottom: 20px;
     }
     .event
     {
@@ -435,35 +536,15 @@ h2
 {
     .hero h1
     {
-        font-size: 30px;
+        font-size: 28px;
     }
-    .header
+    h2
     {
-        height: auto;
-        position: relative;
+        font-size: 20px;
     }
-    .header .centro
+    .project-details
     {
-        flex-direction: column;
-    }
-    .header ul
-    {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .menu ul li
-    {
-        display: block;
-    }
-    .menu ul li a
-    {
-        margin: 10px 0;
-        padding: 0;
-        font-size: 2em;
-    }
-    .menu ul li a
-    {
-        border-bottom: 1px solid;
+        font-size: 14px;
     }
     .contact
     {
@@ -497,45 +578,15 @@ h2
     .footer p
     {
         margin: 5px 0;
-    }
-    .header ul li
-    {
-        height: auto;
-    }
-    .menu
-    {
-        position: fixed;
-        top: 0;
-        left: -100vw;
-        right: 0;
-        bottom: 0;
-        height: 100vh;
-        width: 100vw;
-        background: rgba(2, 111, 255, .9);
-        z-index: 3;
-        transition: .3s;
-    }
-    .menu.is-active
-    {
-        left: 0;
-    }
-    .menu-icono
-    {
-        display: block;
-        width: 40px;
-        height: 40px;
-        background: rgba(0,0,0,.8);
-        border-radius: 20px;
-        position: fixed;
-        top: 5px;
-        left: 5px;
         text-align: center;
-        line-height: 40px;
-        z-index: 4;
     }
 }
 @media screen and (max-width: 320px)
 {
+    .menu-icono
+    {
+        left: 5px;
+    }
     .hero h1
     {
         font-size: 22px;

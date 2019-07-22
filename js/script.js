@@ -26,7 +26,7 @@ function queTal()
 //optimizamos el JS
 
 //cremoa la media query que queremos comprobar
-const mobile = window.matchMedia("screen and (max-width: 480px)");
+const mobile = window.matchMedia("screen and (max-width: 767px)");
 
 //creamos un escuchador
 mobile.addListener(validacion)
